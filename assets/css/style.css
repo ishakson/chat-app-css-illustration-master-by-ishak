@@ -51,6 +51,12 @@ body {
     position: relative;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .attribution {
     position: absolute;
     bottom: 0;
