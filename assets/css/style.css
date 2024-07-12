@@ -1,72 +1,340 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
-    /* COLORS */
-    /*primary*/
-    --pale-violet: hsl(276, 100%, 81%);/*sub-heading at the top of the app UI*/
-    --moderate-violet: hsl(276, 55%, 52%);/* chat on the left*/
-    --desaturated-dark-violet: hsl(271, 15%, 43%);/* chat on the right*/
-    --grayish-blue: hsl(206, 6%, 79%);/* placeholder text */
-    --very-dark-grayish-violet: hsl(271, 36%, 24%);/* main heading*/
-    --dark-grayish-violet: hsl(270, 7%, 64%);/* paragraph*/
+  /* COLORS */
+  /*primary*/
+  --pale-violet: hsl(276, 100%, 81%); /*sub-heading at the top of the app UI*/
+  --moderate-violet: hsl(276, 55%, 52%); /* chat on the left*/
+  --desaturated-dark-violet: hsl(271, 15%, 43%); /* chat on the right*/
+  --grayish-blue: hsl(206, 6%, 79%); /* placeholder text */
+  --very-dark-grayish-violet-main: hsl(271, 36%, 24%); /* main heading*/
+  --dark-grayish-violet: hsl(270, 7%, 64%); /* paragraph*/
 
-    /*gradient*/
-    /*These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:*/
-    --light-magenta: hsl(293, 100%, 63%);
-    --light-violet: hsl(264, 100%, 61%);
+  /*gradient*/
+  /*These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:*/
+  --light-magenta: hsl(293, 100%, 63%);
+  --light-violet: hsl(264, 100%, 61%);
 
-    /*secondary*/
-    --white: hsl(0, 0%, 100%);
-    --light-grayish-violet: hsl(270, 20%, 96%);/*app background*/
-    --very-dark-grayish-violet: hsl(271, 60%, 91%);/*submit button background*/
-    --very-light-magenta: hsl(289, 100%, 72%);/*radio button outline*/
+  /*secondary*/
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 20%, 96%); /*app background*/
+  --very-dark-grayish-violet: hsl(271, 60%, 91%); /*submit button background*/
+  --very-light-magenta: hsl(289, 100%, 72%); /*radio button outline*/
 
-
-    --font-family-rubik: 'Rubik', sans-serif;
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-bold: 700;
+  --font-family-rubik: "Rubik", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: var(--font-family-rubik);
-    font-weight: var(--font-weight-regular);
-    font-size: 1.6rem;
-    background-color: var(--light-grayish-violet);
-    color: var(--dark-grayish-violet);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  font-family: var(--font-family-rubik);
+  font-weight: var(--font-weight-regular);
+  font-size: 1.6rem;
+  background-color: var(--light-grayish-violet);
+  color: var(--dark-grayish-violet);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+
+  width: 50%;
+  height: 34em;
+
+  z-index: -1;
+}
+
+.bg-left {
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 100%;
+
+  background-image: linear-gradient(var(--light-magenta), var(--light-violet));
+}
+
+.bg-right {
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 100%;
+  background-color: hsl(258deg 42% 93%);
+  background-image: none;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.4rem auto 4.8rem;
 }
 
-.attribution {
+.illustration {
+  background-color: var(--white);
+  width: 37.5rem;
+  height: 72rem;
+
+  padding: 1.6rem;
+  border-radius: 44px;
+  box-shadow: 0 0 15px 10px rgba(0 , 0, 0, 0.1);
+}
+
+.illustration-container {
+  display: grid;
+  grid-template-rows: 14fr 86fr;
+  grid-template-columns: 1fr;
+  background-color: var(--light-grayish-violet);
+  border-radius: 44px;
+  overflow: hidden;
+  height: 100%;
+}
+.illustration-header {
+  background: linear-gradient(90deg, var(--light-violet), var(--light-magenta));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 26px 26px 9px 9px;
+  box-shadow: 4px 0px 6px 4px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+
+.headspace {
+  width: 18rem;
+  height: 2.6rem;
+  background-color: var(--white);
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  margin-bottom: 2rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.btn i {
+  font-size: 1.6rem;
+}
+
+.btn-back {
+  margin-right: 0.8rem;
+}
+
+.user-img {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  margin-right: 1.2rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  color: var(--white);
+  letter-spacing: 1.4;
+  opacity: 0.8;
+  margin-bottom: 0.4rem;
+}
+
+.user-state {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.btn-nav {
+  margin-left: auto;
+  opacity: 0.5;
+}
+
+.illustration-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.4rem;
+  background-color: hsla(240, 4%, 95%, 0.712);
+}
+
+.message {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-medium);
+  text-align: left;
+  width: 70%;
+}
+
+.message-receptor {
+  color: var(--moderate-violet);
+  opacity: 0.8;
+  background-color: hsla(240, 24%, 90%, 0.856);
+  border-radius: 11px 11px 11px 2px;
+}
+
+.message-sender {
+  background-color: var(--white);
+  align-self: flex-end;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  border-radius: 11px 11px 2px 11px;
+}
+
+.message-sender-images {
+  background-color: hsla(240, 4%, 95%, 0.712);
+  box-shadow: none;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.dog-img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 11px;
+}
+
+.message-price {
+  background: linear-gradient(90deg, var(--light-magenta), var(--light-violet));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+.radio-button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  opacity: 0.2;
+  margin-right: 1rem;
+}
+.radio-text {
+  opacity: 0.5;
+}
+.price {
+  margin-left: auto;
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-bold);
+  margin-right: 1rem;
+}
+.msg-sect {
+    width: 100%;
+  position: relative;
+
+}
+.messageInput {
+    width: 100%;
+  border: none;
+  background-color: var(--white);
+  border-radius: 24px;
+  padding: 1.6rem;
+}
+.messageInput::placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--very-dark-grayish-violet);
+  
+}
+
+.send-btn {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2rem;
+    top: 50%;
+    right: -4%;
+    transform: translate(-50%,-50%);
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: var(--very-dark-grayish-violet-main);
+    box-shadow: 0 0 4px 2px rgba(0 , 0, 0, 0.1);
+}
+
+.container-text{
+    margin: 6rem 2rem;
     text-align: center;
 }
 
+.container-title {
+    color: var(--very-dark-grayish-violet-main);
+    font-size: 4.2rem;
+    font-weight: var(--font-weight-medium);
+
+}
+
+.container-text-inner{
+    line-height:1.6;
+    margin-top: 2rem;
+}
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:975px) {
+    html {
+        font-size: 7px;
+    }
+    .container{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-text {
+        width: 30%;
+        text-align: left;
+        margin: auto 12rem;
+    }
+    .container-text-inner {
+        margin-right: 12rem;
+    }
+
+    .background {
+      
+        width: 30%;
+        height: 80%;
+      }
+
+      .bg-left {
+        border-radius: 0 0 50% 50% ;
+
+      }
+      
+      .bg-right {
+        
+        border-radius:  50% 50% 0 0;
+        
+      }
     
 }

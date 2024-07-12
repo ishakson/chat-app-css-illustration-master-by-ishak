@@ -19,82 +19,93 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <div class="background bg-left"></div>
+    <div class="background bg-right"></div>
+
     <div class="container">
       <div class="illustration">
-        <div class="illustration-header">
-          <div class="headspace"></div>
+        <div class="illustration-container">
+          <div class="illustration-header">
+            <div class="headspace"></div>
 
-          <div class="user">
-            <button class="btn btn-back">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <img
-              src="./assets/images/avatar.jpg"
-              alt="Avatar Photo"
-              class="user-img"
-            />
-            <div class="user-info">
-              <span class="user-name">Samuel Green</span>
-              <span class="user-state">Available to Walk</span>
+            <div class="user">
+              <button class="btn btn-back">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <img
+                src="./assets/images/avatar.jpg"
+                alt="Avatar Photo"
+                class="user-img"
+              />
+              <div class="user-info">
+                <span class="user-name">Samuel Green</span>
+                <span class="user-state">Available to Walk</span>
+              </div>
+              <button class="btn btn-nav">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </button>
             </div>
-            <button class="btn btn-nav">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
           </div>
-        </div>
-        <div class="illustration-body">
-          <div class="message message-receptor">
-            That sounds great. I’d be happy with that.
-          </div>
-          <div class="message message-receptor">
-            Could you send over some pictures of your dog, please?
-          </div>
+          <div class="illustration-body">
+            <div class="message message-receptor">
+              That sounds great. I’d be happy with that.
+            </div>
+            <div class="message message-receptor">
+              Could you send over some pictures of your dog, please?
+            </div>
 
-          <div class="message message-sender">
-            <img
-              src="./assets/images/dog-image-1.jpg"
-              alt="dog image"
-              class="dog-img"
-            />
-            <img
-              src="./assets/images/dog-image-2.jpg"
-              alt="dog image"
-              class="dog-img"
-            />
-            <img
-              src="./assets/images/dog-image-3.jpg"
-              alt="dog image"
-              class="dog-img"
-            />
-          </div>
-          <div class="message message-sender">
-            Here are a few pictures. She’s a happy girl!
-          </div>
-          <div class="message message-sender">Can you make it?</div>
-          <div class="message message-receptor">
-            She looks so happy! The time we discussed works. How long shall I
-            take her out for?
-          </div>
-          <div class="message message-receptor message-price">
-            <span class="radio-button"></span> 30 minute walk
-            <span class="price">$29</span>
-          </div>
-          <div class="message message-receptor message-price">
-            <span class="radio-button"></span> 1 hour walk
-            <span class="price">$49</span>
+            <div class="message message-sender message-sender-images">
+              <img
+                src="./assets/images/dog-image-1.jpg"
+                alt="dog image"
+                class="dog-img"
+              />
+              <img
+                src="./assets/images/dog-image-2.jpg"
+                alt="dog image"
+                class="dog-img"
+              />
+              <img
+                src="./assets/images/dog-image-3.jpg"
+                alt="dog image"
+                class="dog-img"
+              />
+            </div>
+            <div class="message message-sender">
+              Here are a few pictures. She’s a happy girl!
+            </div>
+            <div class="message message-sender">Can you make it?</div>
+            <div class="message message-receptor">
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </div>
+            <div class="message message-receptor message-price">
+              <span class="radio-button"></span>
+              <span class="radio-text">30 minute walk</span>
+              <span class="price">$29</span>
+            </div>
+            <div class="message message-receptor message-price">
+              <span class="radio-button"></span>
+              <span class="radio-text">1 hour walk</span>
+              <span class="price">$49</span>
+            </div>
+            <div class="msg-sect">
+              <input
+                type="text"
+                name="messageInput"
+                class="messageInput"
+                placeholder="Type a message..."
+              />
+              <button class="btn send-btn">
+                <i class="icon fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
         </div>
-        <textarea
-          name="messageInpur"
-          placeholder="Type a message..."
-        ></textarea>
-        <button class="btn send-btn">
-          <i class="icon fa-solid fa-chevron-right"></i>
-        </button>
       </div>
       <div class="container-text">
         <h1 class="container-title">Simple booking</h1>
-        <p class="container-text">
+        <p class="container-text-inner">
           Stay in touch with our dog walkers through the chat interface. This
           makes it easy to discuss arrangements and make bookings. Once the walk
           has been completed you can rate your walker and book again all through
